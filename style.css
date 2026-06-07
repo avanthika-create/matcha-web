@@ -41,6 +41,14 @@ body {
     cursor: pointer;
 }
 
+.about p:hover { 
+    font-size: 18px; 
+    color: #2c6d2c;
+    cursor: pointer;
+
+
+}
+
 section { 
     padding: 80px 20px;
     text-align: center;
@@ -78,7 +86,7 @@ img:hover {
 }
 
 .hero { 
-    height: 90vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,6 +95,7 @@ img:hover {
     background-size: cover; 
     background-position: center;
     color: rgb(0, 0, 0);
+    background: linear-gradient(#2d6d2c, #d5e7d8);
 }
 
 .about { 
@@ -102,15 +111,31 @@ img:hover {
     box-shadow: 0 0 10px #1b4d1b;
 }
 
+.contact { 
+    background-color: #eaf6ea;
+    padding: 50px;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.contact:hover { 
+   transition: background-color 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 0 10px #1b4d1b;
+}
+
 .hero h1 { 
     font-size: 48px;
     margin-bottom: 20px;   
     letter-spacing: 2px;
+    z-index: 1001;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 .hero p { 
     font-size: 24px;
     opacity: 0.8;
+    z-index: 1001;
 }
 
 section, .menu, .about, .contact { 
@@ -144,4 +169,35 @@ section, .menu, .about, .contact {
 .button button:hover { 
     transform: scale(1.05);
     background-color: #1b4d1b;
+}
+
+/* matcha spin */
+
+.matcha-circle {
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    width: 900px; 
+    position: absolute; 
+    animation: slideIn 1.5s ease-out forwards, spin 12s linear infinite;
+    z-index: 999;
+}
+
+@keyframes slideIn { 
+    from { 
+        opacity: 0; 
+        transform: translate(-200px, -50%);
+    } 
+
+} 
+
+@keyframes spin {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 360deg;
+    }
 }

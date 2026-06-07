@@ -7,7 +7,7 @@ document.querySelectorAll('.navbar a').forEach(link => {
 });
 
 document.getElementById('shopBtn').addEventListener('click', function() {
-    alert("Shop Now!");
+    alert("Shop for matcha now!");
 });
 
 const menuItems = document.querySelectorAll('.card');
