@@ -1,5 +1,10 @@
 body { 
-    background-color: #d5e7d8;
+    background:  linear-gradient(
+    135deg,
+    #f7f4ee,
+    #e8f0e6,
+    #d5e7d8
+);
     margin: 0;
     scroll-behavior: smooth;
     font-family: Arial, sans-serif;
@@ -12,7 +17,15 @@ body {
     padding: 14px 20px;
     text-align: center;
     font-family: Arial, sans-serif;
+    position: sticky;
+    top: 15px;
+    width: fit-content;
+    margin: 30px auto;
+    background: rgb(255, 255, 255, 0.35);
+    font-size: 20px;
+    z-index: 1002;
 }
+
 
 .header { 
     text-align: center;
@@ -47,6 +60,12 @@ body {
     cursor: pointer;
 
 
+}
+
+.announcments p:hover { 
+    font-size: 18px;
+    color: #2c6d2c;
+    cursor: pointer;
 }
 
 section { 
@@ -85,17 +104,14 @@ img:hover {
     box-shadow: 0 0 10px #1b4d1b;
 }
 
-.hero { 
+.home { 
     height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color:hsl(from color h s l);
-    background-size: cover; 
-    background-position: center;
-    color: rgb(0, 0, 0);
-    background: linear-gradient(#2d6d2c, #d5e7d8);
+    background-size: cover;
+    background: linear-gradient(#405c40, #d5e7d8);
 }
 
 .about { 
@@ -124,7 +140,31 @@ img:hover {
     box-shadow: 0 0 10px #1b4d1b;
 }
 
-.hero h1 { 
+.announcments { 
+    background-color: #eaf6ea;
+    padding: 50px;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+
+.announcments:hover { 
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 0 10px #1b4d1b;
+}
+
+.announcments h2 { 
+    align-items: center;
+}
+
+h2 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.home h1 { 
     font-size: 48px;
     margin-bottom: 20px;   
     letter-spacing: 2px;
@@ -132,13 +172,13 @@ img:hover {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
-.hero p { 
+.home p { 
     font-size: 24px;
     opacity: 0.8;
     z-index: 1001;
 }
 
-section, .menu, .about, .contact { 
+section, .announcments, .menu, .about, .contact { 
     padding: 80px 20px;
     text-align: center;
 }
@@ -171,7 +211,7 @@ section, .menu, .about, .contact {
     background-color: #1b4d1b;
 }
 
-/* matcha spin */
+
 
 .matcha-circle {
     background: transparent !important;
@@ -187,8 +227,13 @@ section, .menu, .about, .contact {
 @keyframes slideIn { 
     from { 
         opacity: 0; 
-        transform: translate(-200px, -50%);
+        transform: translateX(-200px, -50%);
     } 
+
+    to { 
+        opacity: 1; 
+        transform: translateX(0);
+    }
 
 } 
 
