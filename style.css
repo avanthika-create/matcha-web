@@ -2,8 +2,10 @@ body {
     background-color: #d5e7d8;
     margin: 0;
     scroll-behavior: smooth;
-    font-color: #405048;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
+
 
 .navbar { 
     background-color: #2c6d2c;
@@ -15,4 +17,131 @@ body {
 .header { 
     text-align: center;
     padding: 50px;
+}
+
+.header h1 { 
+    font-size: 48px;
+    color: #2c6d2c;
+}
+
+.menu li:hover { 
+    cursor: pointer;
+    color: #2c6d2c;
+    font-size: 18px;
+}
+
+.menu li { 
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.contact p:hover { 
+    font-size: 18px;
+    color: #2c6d2c;
+    cursor: pointer;
+}
+
+section { 
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.button { 
+    text-align: center;
+    margin: 20px;
+}
+
+.button button { 
+    background-color: #2c6d2c;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button button:hover { 
+    background-color: #1b4d1b;
+}
+
+
+img { 
+    background-color: #eaf6ea;
+    border-radius: 15px; 
+}
+
+img:hover { 
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 0 10px #1b4d1b;
+}
+
+.hero { 
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:hsl(from color h s l);
+    background-size: cover; 
+    background-position: center;
+    color: rgb(0, 0, 0);
+}
+
+.about { 
+    background-color: #eaf6ea;
+    padding: 50px;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.about:hover { 
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 0 10px #1b4d1b;
+}
+
+.hero h1 { 
+    font-size: 48px;
+    margin-bottom: 20px;   
+    letter-spacing: 2px;
+}
+
+.hero p { 
+    font-size: 24px;
+    opacity: 0.8;
+}
+
+section, .menu, .about, .contact { 
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.card { 
+    width: 550px;
+
+}
+
+.card-container { 
+    justify-content: center;
+    display: flex;
+    gap: 25px;
+    max-width: 500px;
+    margin:auto;
+}
+
+
+.button button { 
+    background-color: #2c6d2c;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button button:hover { 
+    transform: scale(1.05);
+    background-color: #1b4d1b;
 }
