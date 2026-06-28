@@ -78,10 +78,47 @@
 
 </div>
 
-<div class="button"> 
-<button id="shopBtn">Shop Now</button> 
+
+<section id="quiz" class="quiz fade">
+<h2>Find Your Matcha</h2>
+<p>Answer a few questions to discover your ideal order</p>
+
+<div class="question">
+    <h3>1. What are you in the mood for?</h3>
+    <label> 
+        <input type="radio" name="mood" value="energy"> Need Energy</label>
+    <label> 
+        <input type="radio" name="mood" value="relax">
+        Relax</label>
+    <label> 
+        <input type="radio" name="mood" value="dessert">
+        Dessert</label>
+    <label>
+        <input type="radio" name="mood" value="refreshing">
+        Something Refreshing</label>
 </div>
 
+<div class="question">
+    <h3>2. Which flavor sounds best?</h3>
+    <label><input type="radio" namee="flavor" value="sweet"> Sweet</label>
+    <label><input type="radio" name="flavor" value="earthy"> Earthy</label>
+    <label><input type="radio" name="flavor" value="creamy"> Creamy</label>
+    <label><input type="radio" name="flavor" value="fresh"> Fresh</label>
+</div>
+
+<div class="question">
+    <h3>3. Hot or cold?</h3>
+    <label><input type="radio" name="temperature" value="hot"> Hot</label>
+    <label><input type="radio" name="temperature" value="cold"> Iced</label>
+</div>
+
+<button id="quizBtn"> 
+    Find My Matcha
+</button>
+
+<div id="quizResult"></div>
+
+</section>
 
 
 <script src="script.js"></script>
