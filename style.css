@@ -135,6 +135,7 @@ img:hover {
     margin: 20px;
 }
 
+
 .about:hover { 
     transition: background-color 0.3s ease;
     cursor: pointer;
@@ -282,7 +283,7 @@ section, .announcments, .menu, .about, .contact {
     translate: translateY(0);
 }
 
-.menu, .announcments, .about, .contact { 
+.menu, .announcments, .about, .contact, .locator { 
     margin: 80px;
 }
 
@@ -312,7 +313,7 @@ h1, h2, h3 {
 
 
 #quizBtn {
-    padding: 14px, 28px;
+    padding: 14px 28px;
     background: #2c6d2c;
     color: white; 
     border: none; 
@@ -327,3 +328,22 @@ h1, h2, h3 {
     font-weight: bold;
 }
 
+.locator { 
+    background: #eaf6ea;
+    margin: 80px; 
+    padding: 50px; 
+    border-radius: 20px; 
+    text-align: center;
+}
+
+.quiz,
+.locator {
+    transition: all 0.3s ease;
+}
+
+.quiz:hover,
+.locator:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(44, 109, 44, 0.3);
+    background-color: #f3fbf3;
+}

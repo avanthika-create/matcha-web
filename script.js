@@ -1,58 +1,152 @@
 console.log("JS IS WORKING");
 
+
+// search last
+const searchBtn = document.getElementById("searchBtn");
+searchBtn.addEventListener("click", () => { 
+
+    const matcha = document.getElementById("matchaType").value; 
+
+    const url = `https://www.google.com/maps/search/${encodeURIComponent(matcha + " near me")}`;
+
+    window.open(url, "_blank");
+
+});
+
+// quiz 
 const quizBtn = document.getElementById("quizBtn");
 
 quizBtn.addEventListener("click", () => {
 
     const mood = document.querySelector('input[name="mood"]:checked');
+    const flavor = document.querySelector('input[name="flavor"]:checked');
+    const temperature = document.querySelector('input[name="temperature"]:checked');
+    const caffeine = document.querySelector('input[name="caffeine"]:checked');
+    const activity = document.querySelector('input[name="activity"]:checked');
 
-    if (!mood) {
-        alert("Please choose an option!");
+    if (!mood || !flavor || !temperature || !caffeine || !activity) {
+        alert("Please answer every question!");
         return;
     }
 
-    let recommendation = "";
+    let tea = 0;
+    let latte = 0;
+    let cake = 0;
+    let iceCream = 0;
 
     switch (mood.value) {
-
         case "energy":
-            recommendation = "Matcha Green Tea";
+            tea += 2;
             break;
-
         case "relax":
-            recommendation = "Matcha Ice Cream";
+            iceCream += 2;
             break;
-
         case "dessert":
-            recommendation = "Matcha Cake";
+            cake += 2;
             break;
-
         case "refreshing":
-            recommendation = "Matcha Latte";
+            latte += 2;
             break;
     }
 
-    document.getElementById("quizResult").innerHTML = `
-        <h3>Your Matcha Match:</h3>
-        <p>${recommendation}</p>
-    `;
+    switch (flavor.value) {
+        case "sweet":
+            cake++;
+            latte++;
+            break;
+        case "earthy":
+            tea += 2;
+            break;
+        case "creamy":
+            latte++;
+            iceCream++;
+            break;
+        case "fresh":
+            tea++;
+            latte++;
+            break;
+    }
 
+    switch (temperature.value) {
+        case "hot":
+            tea++;
+            latte++;
+            break;
+        case "iced":
+            latte++;
+            iceCream++;
+            break;
+    }
+
+    switch (caffeine.value) {
+        case "high":
+            tea += 2;
+            break;
+        case "medium":
+            latte += 2;
+            break;
+        case "low":
+            cake++;
+            iceCream++;
+            break;
+    }
+
+    switch (activity.value) {
+        case "study":
+            tea++;
+            latte += 2;
+            break;
+        case "reading":
+            tea++;
+            break;
+        case "friends":
+            latte++;
+            iceCream++;
+            break;
+        case "dessert":
+            cake += 2;
+            break;
+    }
+
+    let recommendation = "";
+    let description = "";
+
+    const highest = Math.max(tea, latte, cake, iceCream);
+
+    if (highest === tea) {
+        recommendation = "Matcha Green Tea";
+        description = "You enjoy classic, earthy flavors with an energizing boost.";
+    } else if (highest === latte) {
+        recommendation = "Matcha Latte";
+        description = "You love smooth, creamy drinks that are perfect for any time of day.";
+    } else if (highest === cake) {
+        recommendation = "Matcha Cake";
+        description = "You have a sweet tooth and enjoy rich matcha desserts.";
+    } else {
+        recommendation = "Matcha Ice Cream";
+        description = "You prefer refreshing treats that are cool and creamy.";
+    }
+
+    document.getElementById("quizResult").innerHTML = `
+        <h3>Your Perfect Match</h3>
+        <h2>${recommendation}</h2>
+        <p>${description}</p>
+    `;
 });
 
-document.querySelectorAll('.navbar a').forEach(link => {
-    link.addEventListener('click', function(event) {
+document.querySelectorAll(".navbar a").forEach(link => {
+    link.addEventListener("click", function(event) {
         event.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const target = document.querySelector(this.getAttribute("href"));
         target.scrollIntoView({ behavior: "smooth" });
     });
 });
 
-
-const menuItems = document.querySelectorAll('.card');
+const menuItems = document.querySelectorAll(".card");
 
 menuItems.forEach(item => {
-    item.addEventListener('click', function() {
-        alert(`You selected: ${this.querySelector('h3').textContent}`);
+    item.addEventListener("click", function() {
+        alert(`You selected: ${this.querySelector("h3").textContent}`);
     });
 });
 
