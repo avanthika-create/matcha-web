@@ -347,3 +347,13 @@ h1, h2, h3 {
     box-shadow: 0 0 20px rgba(44, 109, 44, 0.3);
     background-color: #f3fbf3;
 }
+
+.searchBtn {
+    padding: 14px 28px;
+    background: #2c6d2c;
+    color: white; 
+    border: none; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    font-size: 18px;  
+}
