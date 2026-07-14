@@ -101,34 +101,53 @@
 <div id="menu" class="menu fade">
   <h2>Our Menu</h2>
  
-<div class="about fade">
+<div class="carousel">
 
-<div class="card-container">
+    <button id="prevBtn">&#10094;</button>
 
-    <div class="card">
-        <img src="assets/matchalatte.png">
-        <h3>Matcha Latte</h3>
+    <div class="carousel-window">
+
+        <div class="carousel-track">
+
+            <div class="card">
+                <img src="assets/matchalatte.png">
+                <h3>Matcha Latte</h3>
+            </div>
+
+            <div class="card">
+                <img src="assets/matchacake.png">
+                <h3>Matcha Cake</h3>
+            </div>
+
+            <div class="card">
+                <img src="assets/matchatea.png">
+                <h3>Matcha Green Tea</h3>
+            </div>
+
+            <div class="card">
+                <img src="assets/matchaicecream.png">
+                <h3>Matcha Ice Cream</h3>
+            </div>
+
+        </div>
+
+
     </div>
 
-    <div class="card">
-        <img src="assets/matchacake.png">
-        <h3>Matcha Cake</h3>
+    <button id="nextBtn">&#10095</button>
+
     </div>
 
-    <div class="card">
-        <img src="assets/matchatea.png">
-        <h3>Matcha Green Tea</h3>
+    <div class="dots">
+        <span class="dot active">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </span>
     </div>
 
-    <div class="card">
-        <img src="assets/matchaicecream.png">
-        <h3>Matcha Ice Cream</h3>
-    </div>
-
-</div>
-</div>
-</div>
-
+   
 </section>
 
 <section id="locator" class="locator fade">
@@ -147,6 +166,8 @@
     <br><br>
 
     <button id="searchBtn">Find Nearby</button>
+
+    <p id="locatorMessage"></p>
 
 </section>
 

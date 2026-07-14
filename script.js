@@ -1,22 +1,32 @@
 console.log("JS IS WORKING");
 
 
-// search last
+
 const searchBtn = document.getElementById("searchBtn");
+
 searchBtn.addEventListener("click", () => { 
 
-    const matcha = document.getElementById("matchaType").value; 
+    const matcha = document.getElementById("matchaType").value;
+
+    document.getElementById("locatorMessage").textContent =
+    `Opening Google Maps to find ${matcha} near you...`;
+
+    searchBtn.textContent = "Opening...";
 
     const url = `https://www.google.com/maps/search/${encodeURIComponent(matcha + " near me")}`;
 
     window.open(url, "_blank");
 
+    setTimeout(() => { 
+        searchBtn.textContent = "Find Nearby";
+    }, 1500);
+        
 });
 
 // quiz 
 const quizBtn = document.getElementById("quizBtn");
 
-quizBtn.addEventListener("click", () => {
+if (quizBtn) { quizBtn.addEventListener("click", () => {
 
     const mood = document.querySelector('input[name="mood"]:checked');
     const flavor = document.querySelector('input[name="flavor"]:checked');
@@ -141,6 +151,8 @@ document.querySelectorAll(".navbar a").forEach(link => {
         target.scrollIntoView({ behavior: "smooth" });
     });
 });
+ }
+
 
 const menuItems = document.querySelectorAll(".card");
 
