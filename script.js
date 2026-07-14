@@ -144,6 +144,46 @@ if (quizBtn) { quizBtn.addEventListener("click", () => {
     `;
 });
 
+// new section for menu 
+
+const track = document.querySelector(".carousel-track");
+const card = document.querySelectorAll(".carousel-track .card");
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
+const dots = document.querySelectorAll(".dot");
+
+let index = 0;
+const cardWidth = 380;
+
+function updateCarousel() { 
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+}
+
+nextBtn.addEventListener("click", () => { 
+    index++;
+
+    if (index >= card.length) { 
+        index= 0;
+    }
+
+    updateCarousel();
+
+});
+
+prevBtn.addEventListener("click", () => {
+    index--;
+
+    if (index < 0) {
+        index = card.length -1;
+    }
+
+    updateCarousel();
+
+})
+
 document.querySelectorAll(".navbar a").forEach(link => {
     link.addEventListener("click", function(event) {
         event.preventDefault();

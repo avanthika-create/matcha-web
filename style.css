@@ -198,35 +198,7 @@ section, .announcments, .menu, .about, .contact {
     text-align: center;
 }
 
-.card { 
 
-    width: 100%;
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-    border-radius: 20px;
-    padding: 15px;
-    transition: all 0.3s ease;
-
-}
-
-.card-container { 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-    max-width: 500px;
-    margin:auto;
-}
-
-.card img { 
-    width: 100%;
-    height: auto;
-}
-
-.card h3 { 
-    margin-top: 10px; 
-    font-size: 18px;
-}
 
 
 .button button { 
@@ -384,5 +356,99 @@ h1, h2, h3 {
 #searchBtn:hover {
 
     transform: scale(1.05);
+
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.carousel-window {
+    width: 380px;
+    overflow: hidden;
+}
+
+.carousel-track { 
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.card h3 { 
+    margin-top: 10px; 
+    font-size: 18px;
+}
+
+.card { 
+
+    min-width: 380px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+
+}
+
+.card img {
+
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+
+}
+
+.card:hover { 
+
+    transform: scale(1.05);
+
+}
+
+.carousel-btn { 
+
+    background: #2c6d2c;
+    color: white;
+    border: none;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    transition: all 0.3s ease;
+
+}
+
+.carousel-btn:hover {
+
+    background: #1b4d1b;
+    transform: scale(1.1);
+
+}
+
+.dots { 
+
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+
+}
+
+.dot { 
+
+    width: 12px;
+    height: 12px;
+    background: #b9cdb9;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+
+}
+
+.dot.active {
+
+    background: #2c6d2c;
+    transform: scale(1.3);
 
 }
